@@ -1,0 +1,31 @@
+Lottery
+
+-------------------------------------------------------------
+TODO:
+
+-------------------------------------------------------------
+
+
+-------------------------------------------------------------
+Archive1:
+1. lottery contract:
+  - fix flow: when paid out, winners, betters, winning numbers DELETED
+
+
+Archive0:
+1. lottery contract:
+  - create contract with receiving eth function
+  - scheduled request for numbers (possible that flask service needs to provide timer service to tell if it's the time to draw numbers)
+  - draw numbers after the time is up (note that parsing json is not neccessary: sorted strings can be compared or flask can do the job)
+  - send pize for the winner (or for close calls)
+  - all the time accept bets, i.e. save betted numbers and if it was paid to the contract the required bet price (flow: bet -> payment -> accept last bet from the address; can be repeated by the same address)
+
+2. front-end:
+  - page where user with metamask can input the numbers and send a bet
+  - if external timer not implemented: periodical call from the contract creator account to release new winning numbers
+  - (optional) the clock to the next number draw
+  - (optional) "check previous result" button which pops up a component informing you about the numbers and about the winner (e.g. 0x9b...a)
+
+3. service:
+  - timer for releasing new winning numbers
+-------------------------------------------------------------

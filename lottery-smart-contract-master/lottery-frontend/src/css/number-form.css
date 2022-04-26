@@ -1,0 +1,14 @@
+.numberForm {
+    display: flex;
+    flex-wrap: nowrap;
+    
+    margin: 20px;
+    padding: 20px;
+    display: inline;
+}
+
+.numberForm > * {
+    width: 50px;
+    margin: 15px;
+    padding: 10px;
+}
